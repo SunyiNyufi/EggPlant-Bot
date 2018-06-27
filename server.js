@@ -24,6 +24,9 @@ var text = message.content.toLowerCase();
   case (text.includes("nugget")):
     message.reply('CHICKEN NUGGETS!!!!!!!!!!!!!!!!!!!!!!!')
     break;
+  case (text.includes("egg")):
+    message.channel.send('Did somebody say eggs? https://imgur.com/qj6IVW2');
+    break;
 }
 });
 
