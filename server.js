@@ -27,6 +27,12 @@ var text = message.content.toLowerCase();
   case (text.includes("aubergines")):
     message.reply(' time for some eggplant facts! Fact: ' + printFact() + ' :eggplant:');
     break;
+  case (text.includes("nugget")):
+    message.reply('CHICKEN NUGGETS!!!!!!!!!!!!!!!!!!!!!!!')
+    break;
+  case (text.includes("nuggets")):
+    message.reply('CHICKEN NUGGETS!!!!!!!!!!!!!!!!!!!!!!!')
+    break;
 }
 });
 
