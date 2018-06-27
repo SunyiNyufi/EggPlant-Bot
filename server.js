@@ -22,7 +22,9 @@ var text = message.content.toLowerCase();
     message.reply(' time for some eggplant facts! Fact: ' + printFact() + ' :eggplant:');
     break;
   case (text.includes("nugget")):
-    message.reply('CHICKEN NUGGETS!!!!!!!!!!!!!!!!!!!!!!!')
+    message.channel.send('CHICKEN NUGGETS!!!!!!!!!!!!!',{
+      files: ['https://cdn.discordapp.com/attachments/459177741271695364/459177771327815690/unknown.png']
+    });
     break;
   case (text.includes("egg")):
     message.channel.send('Did somebody say eggs? https://imgur.com/qj6IVW2');
