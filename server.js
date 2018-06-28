@@ -29,6 +29,10 @@ var text = message.content.toLowerCase();
   case (text.includes("egg")):
     message.channel.send('Did somebody say eggs? https://imgur.com/qj6IVW2');
     break;
+  case (text.includes("sendhug")):
+    message.channel.send({
+      files: ['https://media.giphy.com/media/XpgOZHuDfIkoM/giphy.gif']
+    });
 }
 });
 
