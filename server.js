@@ -6,12 +6,22 @@ const client = new Discord.Client();
 
 client.on('message', message => {
 
-//switch case to detect eggplant mention and print out facts
+//switch case to detect trigger words and print response
 var text = message.content.toLowerCase();
 
  switch (true) {
   case (message.author.bot):
     break;
+  case (text.includes("commandlist")): //Prints out the list of trigger words
+    message.channel.send({embed: {
+      title: "I answer to the following words with different responses:",
+      fields: [
+        { name: "Trigger words:", value: "Eggplant or aubergine\nEgg or eggs\nNugget or nuggets\nSendhug\nCommandlist", inline: true},
+        { name: "Response:", value: "Random eggplant fact\nA beautiful picture of Yolky Areolas\nA picture of all mighty Roxas\nSending Virtual Hug\nPrints this list", inline: true}
+      ]}
+  });
+    break;
+  //eggplant facts yay
   case (message.content.includes("🍆")):
     message.reply(' time for some eggplant facts! Fact: ' + printFact() + ' :eggplant:');
     break;
@@ -21,14 +31,19 @@ var text = message.content.toLowerCase();
   case (text.includes("aubergine")):
     message.reply(' time for some eggplant facts! Fact: ' + printFact() + ' :eggplant:');
     break;
+  //Roxas and his chicken nugget
   case (text.includes("nugget")):
     message.channel.send('CHICKEN NUGGETS!!!!!!!!!!!!!',{
       files: ['https://cdn.discordapp.com/attachments/459177741271695364/459177771327815690/unknown.png']
     });
     break;
+  //Yolky Areolas
   case (text.includes("egg")):
-    message.channel.send('Did somebody say eggs? https://imgur.com/qj6IVW2');
+    message.channel.send('Did somebody say eggs?', {
+      files: ['https://i.imgur.com/qj6IVW2.png']
+    });
     break;
+  //Sending virtual hugs
   case (text.includes("sendhug")):
     message.channel.send({
       files: ['https://media.giphy.com/media/XpgOZHuDfIkoM/giphy.gif']
