@@ -48,6 +48,10 @@ var text = message.content.toLowerCase();
     message.channel.send({
       files: ['https://media.giphy.com/media/XpgOZHuDfIkoM/giphy.gif']
     });
+  case (text.includes("perv")):
+    message.react('👀')
+      .then(console.log)
+      .catch(console.error);
 }
 });
 
