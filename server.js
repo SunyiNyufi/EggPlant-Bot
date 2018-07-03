@@ -32,7 +32,7 @@ var text = message.content.toLowerCase();
     message.reply(' time for some eggplant facts! Fact: ' + printFact() + ' :eggplant:');
     break;
   //Roxas and his chicken nugget
-  case (text.includes("nugget")):
+  case (text.includes("nugg")):
     message.channel.send('CHICKEN NUGGETS!!!!!!!!!!!!!',{
       files: ['https://cdn.discordapp.com/attachments/459177741271695364/459177771327815690/unknown.png']
     });
@@ -48,10 +48,12 @@ var text = message.content.toLowerCase();
     message.channel.send({
       files: ['https://media.giphy.com/media/XpgOZHuDfIkoM/giphy.gif']
     });
+    break;
   case (text.includes("perv")):
     message.react('👀')
       .then(console.log)
       .catch(console.error);
+    break;
 }
 });
 
