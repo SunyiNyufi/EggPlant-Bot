@@ -57,7 +57,8 @@ var text = message.content.toLowerCase();
 }
 });
 
-client.login("NDYxMDkwODQwNzgyMzA3MzQ4.DhOZjQ.bUB4IyhXeqz-s5UP-EStNXtXgFc");
+var token = require('./token.js');
+ client.login(token.botToken);
 
 function printFact() {
   var randomNumber = Math.floor(Math.random() * (facts.length));
